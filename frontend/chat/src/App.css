@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add padding to the conversation area */
+.conversation {
+  padding-bottom: 100px; /* Adjust to the height of the prompt input */
+  max-height: calc(100vh - 100px); /* Avoid overflow of conversation content */
+  overflow-y: auto; /* Enable scrolling if needed */
+}
+
+.prompt-container{
+  position: fixed;
+  bottom: 0px;
+  background-color: #c4c4c47e;
+  box-shadow: black;
+  
+}
+
+.prompt{
+  margin-left: 10%;
+  width:80%;
+  border-radius: 1.5rem;
+  height: 3rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #282c344f;
+  
+}
+
+.speech-bubble-area{
+  width:100%;
+}
+
+.speech-bubble{
+  border-radius: 1.5rem;
+
+  background-color: rgba(153, 153, 153, 0.377);
+}
+
+
+
+.prompt-submit{
+  height: 3rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+
+}
+
+.speech-bubble-area.user-bubble .speech-bubble {
+  background-color: #e0f7fa;
+  text-align: right;
+}
+
+.speech-bubble-area.bot-bubble .speech-bubble {
+  background-color: #f1f1f1;
+  text-align: left;
+}
+
+/* Speech bubble container */
+.speech-bubble-area {
+  display: flex;
+  margin: 10px;
+}
+
+/* User bubble alignment (to the right) */
+.user-bubble {
+  justify-content: flex-end;
+}
+
+/* Assistant bubble alignment (to the left) */
+.bot-bubble {
+  justify-content: flex-start;
+}
+
+/* Speech bubble styling */
+.speech-bubble {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+/* User's bubble styling */
+.align-right {
+  background-color: #d1f8ff;
+  text-align: right;
+  border-radius: 20px 20px 0 20px;
+}
+
+/* Assistant's bubble styling */
+.align-left {
+  background-color: #f1f1f1;
+  text-align: left;
+  border-radius: 20px 20px 20px 0;
+}
